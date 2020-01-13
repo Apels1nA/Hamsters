@@ -1,0 +1,48 @@
+[
+    // OBJECT
+    {
+        "title": "some",
+        "devices": [] 
+    },
+
+    // COMMAND
+    {
+        "code": "open",
+        "title": "Открыть ворота",
+        "type": "open" // Тип кнопки - цвет + иконка, enum. Имеет смысл хранить в локальной БД на устройстве.
+    },
+
+    /*
+        Конечный код для отправки = PART.number + DEVICE.password + COMMAND.code
+    */
+
+    /* GROUP
+        По умолчанию пишется в нулевую группу, которая создается при создании устройства.
+    */
+    {
+        "title": "3 подъезд",
+        "parts": []
+    },
+
+    // PART
+    {
+        "number": 1,
+        "location": "Подвал"
+    },
+
+    // TYPE - тип устройства
+    {
+        "name": "signal",
+        "title": "Пожарная сигнализация",
+        "commands": []
+    },
+
+    // DEVICES
+    {
+        "type": "signal", // TYPE.name
+        "comment": "some",
+        "password": "secret",
+        "number": "+79993334455",
+        "groups": []
+    },
+]
